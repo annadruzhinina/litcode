@@ -1,0 +1,15 @@
+function findErrorNums(nums) {
+  let miss = [];
+  if (nums.length === 0) return null;
+
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i + 1] - nums[i] > 1) {
+      miss.push(nums[i] + 1);
+    } else {
+      console.log("okey");
+    }
+  }
+  return miss;
+}
+
+console.log(findErrorNums([1, 2, 4, 5, 7, 10]));
